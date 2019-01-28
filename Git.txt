@@ -1,0 +1,12 @@
+初始化一个文件让git管理 git init
+
+ls -ah命令可以看见文件夹目录
+
+把文件添加到仓库 git add filtName
+
+把文件提交到仓库 git commit -m "description"
+
+查看仓库当前的状态 git status 
+
+git diff 查看不同
+
