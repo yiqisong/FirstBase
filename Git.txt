@@ -2,11 +2,46 @@
 
 ls -ah命令可以看见文件夹目录
 
-把文件添加到仓库 git add filtName
-
-把文件提交到仓库 git commit -m "description"
+把文件添加到仓库 git add filtName     实际上就是把文件添加进暂存区
+ 
+把文件提交到仓库 git commit -m "description"     实际上是把暂存区的所有文件提交到当前分支
 
 查看仓库当前的状态 git status 
 
 git diff 查看不同
 
+git log 查看历史记录
+
+git reset --hard HEAD^ （版本号）  回退到该版本号的版本
+
+git reflog 记录每次的命令
+
+git diff HEAD -- fileName 查看工作区和版本库的最新版本的区别
+
+git checkout --file 丢弃工作区的修改
+
+git reset HEAD fileName  当已经修改了并且add了 可以使用该命令取消ADD
+
+删除文件 git rm fileName 然后commit
+
+
+
+关联一个远程仓库： git remote add origin git@server-name:path/repo-name.git
+
+我的第一个远程仓库：$ git remote add origin git@github.com:yiqisong/FirstBase.git
+
+关联后，会用命令:git push -u origin master 第一次推送master分支的所有内容，
+以后每次推送只需使用 git push origin master
+
+
+从远程仓库克隆：
+	git clone git@github.com:yiqisong/gitskii.git
+
+
+Git鼓励大量使用分支：
+查看分支 git branch 
+创建分支 git branch 分支名
+切换分支 git checkout 分支名
+创建加切换分支 git checkout -b 分支名
+合并指定名称的分支到当前分支 git merge 分支名
+删除分支 git branch -d 分支名
